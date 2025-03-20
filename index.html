@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- STYLES -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/img/dashstack.svg">
+  <title>DashStack</title>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <div class="logo">
+        <img src="./assets/img/logo.svg" alt="Logo DashStack">
+      </div>
+      <ul class="nav-items" id="render"></ul>
+      <div class="divider"></div>
+      <h2 class="title">PAGES</h2>
+      <ul class="nav-items" id="pages"></ul>
+      <div class="divider"></div>
+      <ul class="nav-items" id="user"></ul>
+    </nav>
+
+    <section class="section">
+      <header class="header">
+        <div class="searchbar">
+          <img src="./assets/img/search-icon.svg" alt="Search Icon">
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="right">
+          <div class="notification">
+            <div class="count">6</div>
+            <img src="./assets/img/notification.svg" alt="Notification Icon">
+          </div>
+
+          <div class="language">
+            <img src="./assets/img/language.svg" alt="Language">
+            English
+            <img src="./assets/img/angle-down.svg" alt="Angle Down">
+          </div>
+
+          <div class="user">
+            <img src="./assets/img/user.jpg" alt="User">
+            <div class="user-name">
+              <p>Marcos L. Ferreira</p>
+              <span>Admin</span>
+            </div>
+            <div class="angle-down">
+              <img src="./assets/img/angle-down.svg" alt="Angle Down">
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <h1 class="title">Dashboard</h1>
+        <div class="small-cards"></div>
+
+        <div class="card">
+          <div class="title">
+            Sales Details
+          </div>
+          <img class="graphic" src="./assets/img/graphic.png" alt="">
+        </div>
+
+        <div class="card">
+          <div class="title">
+            Deals Details
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/js/nav.js"></script>
+  <script src="./assets/js/small-cards.js"></script>
+</body>
+
+</html>

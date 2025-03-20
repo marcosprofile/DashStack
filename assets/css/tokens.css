@@ -1,0 +1,23 @@
+:root {
+  /* BACKGROUND */
+  --bg-light: #F5F6FA;
+  
+  /* TEXT */
+  --text: #202224;
+  --subtitle: #565656;
+  
+  /* BORDERS */
+  --border-color: #E0E0E0;
+  
+  /* COLORS */
+  --white: #FFFFFF;
+  --primary: #4880FF;
+  --primary-hover: #E7EEFF;
+
+  /* SHADOW */
+  --elevation-shadow: 6px 6px 54px rgba(0, 0, 0, 0.05);
+
+  /* FEEDBACK COLORS */
+  --success: #00B69B;
+  --danger: #F93C65;
+}
