@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/pages/login/index.html",
+      "permanent": true
+    }
+  ]
+}
