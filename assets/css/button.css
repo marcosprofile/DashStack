@@ -14,7 +14,7 @@ button {
     cursor: not-allowed;
   }
 
-  &:hover {
+  &:not(:disabled):hover {
     transform: scale(1.02);
   }
   
@@ -26,7 +26,7 @@ button {
     background-color: var(--primary);
     color: var(--white);
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: #1F64FF;
     }
   }
