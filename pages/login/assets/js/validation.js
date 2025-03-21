@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateForm() {
     const isEmailValid = emailField.checkValidity();
-    const isPasswordValid = passwordField.value.trim().length >= 8;
+    const isPasswordValid = isEmailValid && passwordField.value.trim().length >= 8;
 
     if (!isEmailValid && emailField.dataset.touched === "true") {
       emailError.style.display = "inline";
@@ -24,8 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
       emailError.style.display = "none";
     }
 
-    if (!isPasswordValid && passwordField.dataset.touched === "true") {
-      passwordError.style.display = "inline";
+    if (isEmailValid) {
+      if (!isPasswordValid && passwordField.dataset.touched === "true") {
+        passwordError.style.display = "inline";
+      } else {
+        passwordError.style.display = "none";
+      }
     } else {
       passwordError.style.display = "none";
     }
