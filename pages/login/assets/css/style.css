@@ -18,6 +18,14 @@ body {
     border-radius: 1.5rem;
     box-shadow: var(--elevation-shadow);
 
+    .logo {
+      margin-bottom: 2.5rem;
+
+      img {
+        height: 1.375rem;
+      }
+    }
+
     .title {
       font-size: 2rem;
       font-weight: 700;
