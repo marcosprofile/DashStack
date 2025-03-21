@@ -32,7 +32,7 @@
 
       &::placeholder {
         color: var(--text);
-        opacity: .5;
+        opacity: .4;
       }
     }
   }

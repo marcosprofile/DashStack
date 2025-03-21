@@ -8,17 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <!-- STYLES -->
-  <link rel="stylesheet" href="../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../assets/css/button.css">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="icon" href="../../assets/img/dashstack.svg">
+  <link rel="stylesheet" href="../../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../../assets/css/button.css">
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" href="../../../assets/img/dashstack.svg">
   <title>DashStack</title>
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Login to Account</h1>
-    <p class="subtitle">Please enter your email and password to continue</p>
+    <h1 class="title">Create an Account</h1>
+    <p class="subtitle">Create a account to continue</p>
     
     <form class="form">
       <div class="input">
@@ -27,21 +27,23 @@
         <small id="emailError" style="display: none;">O e-mail deve terminar com .com ou .com.br</small>
       </div>
       <div class="input">
-        <div class="password" required>
-          <label for="password">Password</label>
-          <a href="#">Forget Password?</a>
-        </div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="username" required>
+        <small id="usernameError" style="display: none;">Campo requerido</small>
+      </div>
+      <div class="input">
+        <label for="password">Password</label>
         <input type="password" id="password" name="password" minlength="8" required>
-        <small id="passwordError" style="display: none;">Senha incorreta.</small>
+        <small id="passwordError" style="display: none;">A senha deve ter no mínimo 8 caracteres.</small>
         <div class="input checkbox-container">
-          <input type="checkbox" id="remember" name="remember">
-          <label for="remember">Remember Password</label>
+          <input type="checkbox" id="accept-terms" name="remember" requided>
+          <label for="accept-terms">I accept terms and conditions</label>
         </div>
       </div>
-      <button class="primary" type="submit" id="submitBtn" disabled>Sign In</button>
+      <button class="primary" type="submit" id="submitBtn" disabled>Sign Up</button>
       <div class="message-flex">
-        Don't have an account?
-        <a href="/pages/login/create-account/index.html">Create Account</a>
+        Already have an account?   
+        <a href="/pages/login/index.html">Login</a>
       </div>
     </form>
   </div>

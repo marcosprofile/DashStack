@@ -1,27 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector(".form");
   const emailField = document.querySelector("#email");
+  const usernameField = document.querySelector("#username");
   const passwordField = document.querySelector("#password");
   const submitBtn = document.querySelector("#submitBtn");
   const emailError = document.querySelector("#emailError");
+  const usernameError = document.querySelector("#usernameError");
   const passwordError = document.querySelector("#passwordError");
-  const rememberCheckbox = document.querySelector("#remember");
-
-  if (localStorage.getItem("email") && localStorage.getItem("password")) {
-    emailField.value = localStorage.getItem("email");
-    passwordField.value = localStorage.getItem("password");
-    rememberCheckbox.checked = true;
-    validateForm();
-  }
+  const acceptTermsCheckbox = document.querySelector("#accept-terms");
 
   function validateForm() {
     const isEmailValid = emailField.checkValidity();
+    const isUsernameValid = usernameField.value.trim().length > 0;
     const isPasswordValid = passwordField.value.trim().length >= 8;
+    const isCheckboxChecked = acceptTermsCheckbox.checked;
 
     if (!isEmailValid && emailField.dataset.touched === "true") {
       emailError.style.display = "inline";
     } else {
       emailError.style.display = "none";
+    }
+
+    if (!isUsernameValid && usernameField.dataset.touched === "true") {
+      usernameError.style.display = "inline";
+    } else {
+      usernameError.style.display = "none";
     }
 
     if (!isPasswordValid && passwordField.dataset.touched === "true") {
@@ -30,11 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordError.style.display = "none";
     }
 
-    submitBtn.disabled = !(isEmailValid && isPasswordValid);
+    submitBtn.disabled = !(isEmailValid && isUsernameValid && isPasswordValid && isCheckboxChecked);
   }
 
   emailField.addEventListener("blur", function () {
     emailField.dataset.touched = "true";
+    validateForm();
+  });
+
+  usernameField.addEventListener("blur", function () {
+    usernameField.dataset.touched = "true";
     validateForm();
   });
 
@@ -44,30 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   emailField.addEventListener("input", validateForm);
+  usernameField.addEventListener("input", validateForm);
   passwordField.addEventListener("input", validateForm);
+
+  acceptTermsCheckbox.addEventListener("change", validateForm);
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (!submitBtn.disabled) {
-      if (rememberCheckbox.checked) {
-        localStorage.setItem("email", emailField.value);
-        localStorage.setItem("password", passwordField.value);
-      } else {
-        localStorage.removeItem("email");
-        localStorage.removeItem("password");
-      }
-
-      window.location.href = "../dashboard/index.html";
+      window.location.href = "../../dashboard/index.html";
     }
   });
-
-  const logoutButton = document.querySelector("#logoutBtn");
-  if (logoutButton) {
-    logoutButton.addEventListener("click", function () {
-      localStorage.removeItem("email");
-      localStorage.removeItem("password");
-      window.location.href = "../login/index.html";
-    });
-  }
 });
