@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: var(--elevation-shadow);
+  border-radius: .875rem;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    &.flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

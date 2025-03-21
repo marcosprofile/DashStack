@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
             <h2>${card.value}</h2>
           </div>
           <div class="icon ${card.color}">
-            <img src="./assets/img/${card.icon}" alt="Icon ${card.color}">
+            <img src="../../assets/img/${card.icon}" alt="Icon ${card.color}">
           </div>
         </div>
         <div class="bottom">
-          <img src="./assets/img/${card.graph}" alt="Graph">
+          <img src="../../assets/img/${card.graph}" alt="Graph">
           <p><span class="${card.trendClass}">${card.trend}</span> ${card.trendText}</p>
         </div>
       `;

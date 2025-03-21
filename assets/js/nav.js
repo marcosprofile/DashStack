@@ -39,6 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
           a.classList.add("selected");
         }
 
+        if (item.text === "Logout") {
+          a.addEventListener("click", function () {
+            window.location.href = "../login/index.html";
+          });
+        }
+
         li.appendChild(a);
         ul.appendChild(li);
       });
