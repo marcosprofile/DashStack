@@ -67,11 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const logoutButton = document.querySelector("#logoutBtn");
-  if (logoutButton) {
-    logoutButton.addEventListener("click", function () {
-      localStorage.removeItem("email");
-      localStorage.removeItem("password");
-      window.location.href = "../login/index.html";
-    });
-  }
+  logoutButton.addEventListener("click", function () {
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    window.location.href = "../login/index.html";
+  });
 });

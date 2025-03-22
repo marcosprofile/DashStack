@@ -1,0 +1,17 @@
+input {
+  background-color: #F1F4F9;
+  border: 1px solid #D8D8D8;
+  font-size: 1.125rem;
+  padding: 1rem;
+  border-radius: .5rem;
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--primary);
+  }
+
+  &::placeholder {
+    color: var(--text);
+    opacity: .4;
+  }
+}
