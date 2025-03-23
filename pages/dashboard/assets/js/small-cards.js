@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cardsData.forEach(card => {
       const cardElement = document.createElement("div");
       cardElement.classList.add("card");
+      cardElement.classList.add("small-card-container");
 
       cardElement.innerHTML = `
         <div class="top">

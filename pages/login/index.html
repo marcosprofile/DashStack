@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <!-- STYLES -->
   <link rel="stylesheet" href="../../assets/css/reset.css">
+  <link rel="stylesheet" href="../../assets/css/card.css">
   <link rel="stylesheet" href="../../assets/css/input-text.css">
   <link rel="stylesheet" href="../../assets/css/button.css">
   <link rel="stylesheet" href="../../assets/css/style.css">
@@ -16,19 +20,21 @@
   <link rel="icon" href="../../assets/img/dashstack.svg">
   <title>DashStack</title>
 </head>
+
 <body>
-  <div class="container">
+  <div class="card container">
     <div class="logo">
       <img src="../../assets/img/logo.svg" alt="Logo DashStack">
     </div>
-    
+
     <h1 class="title">Login to Account</h1>
     <p class="subtitle">Please enter your email and password to continue</p>
-    
+
     <form class="form">
       <div class="input">
         <label for="email">Email address</label>
-        <input type="email" id="email" name="email" pattern=".+@.+\.(com|com\.br)$" placeholder="esteban_schiller@gmail.com" required>
+        <input type="email" id="email" name="email" pattern=".+@.+\.(com|com\.br)$"
+          placeholder="esteban_schiller@gmail.com" required>
         <small id="emailError" style="display: none;">O e-mail deve terminar com .com ou .com.br</small>
       </div>
       <div class="input">
@@ -53,4 +59,5 @@
 
   <script src="./assets/js/validation.js"></script>
 </body>
+
 </html>

@@ -19,5 +19,6 @@
 
   /* FEEDBACK COLORS */
   --success: #00B69B;
-  --danger: #F93C65;
+  --warning: #FCBE2D;
+  --danger: #FD5454;
 }
