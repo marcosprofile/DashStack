@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="icon" href="../../assets/img/dashstack.svg">
+  <title>DashStack</title>
+</head>
+
+<body>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      background-color: var(--primary);
+      background-image: url('../../../../assets/img/shape-bg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      font-family: "Nunito Sans", sans-serif;
+
+      h1 {
+        font-size: 4rem;
+        color: var(--white);
+      }
+    }
+  </style>
+
+  <noscript>
+    <p>Se você não for redirecionado automaticamente, <a href="pages/login/index.html">clique aqui</a>.</p>
+  </noscript>
+
+  <h1>Bem-vindo(a) ao DashStack</h1>
+
+  <script>
+    setTimeout(() => {
+      window.location.replace("pages/login/index.html");
+    }, 4000);
+  </script>
+</body>
+
+</html>
